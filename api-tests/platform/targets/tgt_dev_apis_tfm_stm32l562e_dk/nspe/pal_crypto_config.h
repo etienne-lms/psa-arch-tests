@@ -40,8 +40,15 @@
 #define ARCH_TEST_RSA_1024
 #define ARCH_TEST_RSA_2048
 #define ARCH_TEST_RSA_3072
+
+/* RSA 1024 is depreecated and the default flash area for non-secure
+ * application is a bot small. Disabling RSA 1024 bit allows
+ * the test application to fitis the flash area.
+ */
+#undef ARCH_TEST_RSA_1024
 #endif
 #endif
+
 
 /**
  * \def  ARCH_TEST_ECC
